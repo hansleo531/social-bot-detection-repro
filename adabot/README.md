@@ -1,4 +1,4 @@
-# AdaBot 复现（ICMR 2025）
+﻿# AdaBot 复现（ICMR 2025）
 
 ## 原仓库
 <https://github.com/Bryson-Arrot/AdaBot>｜论文 DOI: 10.1145/3731715.3733268
@@ -110,8 +110,9 @@ python AdaBot-cross-dataset.py --dataset1 cresci-15 --dataset2 twibot-20 --data_
 |---|---|---|
 | `coms` | `[[5, 6]]` | 源社区 5，目标社区 6 |
 | `exp_all` | `False` | 不做全组合扫描 |
-| `repeat` | `5` | 5 次重复，报均值 ± 标准差 |
-| `epochs` | 200 | 与原文一致 |
+| `exp_times` | `5` | 5 次独立实验，报均值 ± 标准差 |
+| `iterations` | `5000` | 训练迭代步数（非 epoch），每步一个 batch |
+| `batch_size` | `512` | 邻居采样后的批大小 |
 
 ## 五、踩过的坑
 
@@ -128,3 +129,4 @@ python AdaBot-cross-dataset.py --dataset1 cresci-15 --dataset2 twibot-20 --data_
 | 跨数据集 | 63.96 / 73.80 / 93.81 / 60.82 | — | 65.4 / 74.2 / 93.5 / 61.5 |
 
 （跨数据集四项依次为 Accuracy / F1 / Recall / Precision，均为百分制）
+
