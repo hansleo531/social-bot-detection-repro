@@ -1,0 +1,34 @@
+# ---- 数据与模型（体积大，不纳入版本控制）----
+data/
+Pre_Data/
+*.zip
+*.pt
+*.pth
+*.npy
+*.npz
+*.pkl
+*.ckpt
+*.whl
+*.engine
+
+# ---- 运行产物 ----
+log/
+logs/
+runs/
+checkpoint*/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
+_tmp/
+
+# ---- 编辑器与系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
